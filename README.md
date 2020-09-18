@@ -1,5 +1,8 @@
 # looking-glass-docker
 
+- LookingGlass code is powered by [LookingGlass](https://github.com/telephone/LookingGlass) 
+- Base image is from [php:apache](https://hub.docker.com/_/php)
+
 ## How to use this image
 
 ```Docker-Compose

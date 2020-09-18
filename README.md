@@ -5,11 +5,11 @@
 ```Docker-Compose
 looking-glass:
   container_name: looking-glass
-  image: jnraptor/looking-glass-docker:latest
+  image: jnraptor/looking-glass:latest
   ports:
-  	- "80:80"
+  - "80:80"
   env_file:
-    - looking-glass.env
+  - looking-glass.env
 ```
 
 ## Configuration through env file

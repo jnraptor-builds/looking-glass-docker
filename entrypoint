@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+cd /var/www/html
+rm -rf *
+git clone --depth 1 https://github.com/jnraptor-builds/LookingGlass.git .
+cd LookingGlass
+chmod +x autoconfig.sh
+bash autoconfig.sh
+chown www-data: .
+chown www-data: ratelimit.db
+
+# first arg is `-f` or `--some-option`
+if [ "${1#-}" != "$1" ]; then
+    set -- apache2-foreground "$@"
+fi
+
+exec "$@"

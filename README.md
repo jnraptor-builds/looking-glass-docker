@@ -1,6 +1,6 @@
 # looking-glass-docker
 
-- LookingGlass code is powered by [LookingGlass](https://github.com/telephone/LookingGlass) 
+- LookingGlass code is based on [LookingGlass](https://github.com/telephone/LookingGlass) and updated for PHP7 
 - Base image is from [php:apache](https://hub.docker.com/_/php)
 
 ## How to use this image

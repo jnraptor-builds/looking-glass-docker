@@ -2,8 +2,12 @@
 set -e
 
 cd /var/www/html
-rm -rf *
-git clone --depth 1 https://github.com/jnraptor-builds/LookingGlass.git .
+if [[ -d ".git" ]]; then
+    git pull
+else
+    rm -rfv {*,.*}
+    git clone --depth 1 https://github.com/jnraptor-builds/LookingGlass.git .
+fi
 cd LookingGlass
 chmod +x autoconfig.sh
 bash autoconfig.sh

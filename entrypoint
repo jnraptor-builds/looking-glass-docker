@@ -2,7 +2,8 @@
 set -e
 
 cd /var/www/html
-if [[ -d ".git" ]]; then
+if [ -d ".git" ]; then
+    echo "Existing git repo found. Updating repo..."
     git pull
 else
     rm -rfv {*,.*}
